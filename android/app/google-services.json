@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "247288432186",
+    "project_id": "furnitrue-shopping-app",
+    "storage_bucket": "furnitrue-shopping-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247288432186:android:ea647fa9df7eca1899d703",
+        "android_client_info": {
+          "package_name": "com.app.furniture_shopping_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247288432186-snfv2oco60alm4pl5ae7q3il64mo04at.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.furniture_shopping_app",
+            "certificate_hash": "2d67294f90832663bc609ab13625c6dd792dfaed"
+          }
+        },
+        {
+          "client_id": "247288432186-cvg456r3kge6sdjpf7v66i8ave4eqj7u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClCwEY7ievN_UxIDH3W5RZCpgPossQE10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "247288432186-cvg456r3kge6sdjpf7v66i8ave4eqj7u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
