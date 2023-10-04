@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:furniture_shopping_app/res/constant/app_assets.dart';
 import 'package:furniture_shopping_app/res/constant/app_colors.dart';
 
+import '../../res/constant/app_strings.dart';
+
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
 
@@ -16,7 +18,7 @@ class LoginView extends StatelessWidget {
       child: Scaffold(
         body: Column(
           children: [
-            SizedBox(height: screenHeight / 10),
+            SizedBox(height: screenHeight / 30),
             Row(
               children: [
                 const Expanded(
@@ -42,6 +44,15 @@ class LoginView extends StatelessWidget {
                 ),
               ],
             ),
+            const Text(
+              textAlign: TextAlign.center,
+              AppStrings.welcome,
+              style: TextStyle(
+                color: AppColors.lightBlackColor,
+                fontWeight: FontWeight.w600,
+                fontSize: 32,
+              ),
+            )
           ],
         ),
       ),
