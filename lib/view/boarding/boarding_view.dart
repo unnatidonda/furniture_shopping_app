@@ -68,7 +68,7 @@ class BoardingView extends StatelessWidget {
                     fontSize: 18,
                     fontFamily: "Poppins",
                     fontWeight: FontWeight.w400,
-                    color: AppColors.whiteColor,
+                    color: AppColors.white,
                   ),
                 ),
               ),
