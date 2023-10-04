@@ -70,7 +70,55 @@ class LoginView extends StatelessWidget {
                 ],
               ),
               child: Column(
-                children: [],
+                children: [
+                  SizedBox(height: screenHeight / 20),
+                  Container(
+                    height: screenHeight / 9.5,
+                    width: screenWidth / 1.2,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: AppColors.lightG,
+                        width: 2,
+                      ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(top: screenWidth / 40, left: screenWidth / 20),
+                          child: const Text(
+                            "Email",
+                            style: TextStyle(
+                              color: AppColors.greyColor,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: screenWidth / 20, top: screenWidth / 80),
+                          child: TextFormField(
+                            // controller: emailcontroller,
+                            validator: (value) {
+                              if (!RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(value!)) {
+                                return "Enter email id ";
+                              }
+                              return null;
+                            },
+                            decoration: const InputDecoration(
+                              border: InputBorder.none,
+                              isDense: true,
+                              hintText: "Enter email ",
+                              contentPadding: EdgeInsets.all(12),
+                              hintStyle: TextStyle(color: Color(0xFFB3B3B3), fontSize: 16, fontWeight: FontWeight.w400, fontFamily: "Poppins"),
+                            ),
+                            onTap: () {},
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
