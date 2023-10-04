@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_shopping_app/res/constant/app_assets.dart';
 import 'package:furniture_shopping_app/res/constant/app_colors.dart';
+import 'package:furniture_shopping_app/view/sign_up/sign_up_view.dart';
 
+import '../../res/common/app_button.dart';
 import '../../res/constant/app_strings.dart';
 
 class LoginView extends StatelessWidget {
@@ -116,6 +118,88 @@ class LoginView extends StatelessWidget {
                           ),
                         ),
                       ],
+                    ),
+                  ),
+                  SizedBox(height: screenHeight / 30),
+                  Container(
+                    height: screenHeight / 9.5,
+                    width: screenWidth / 1.2,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        color: AppColors.lightG,
+                        width: 2,
+                      ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(top: screenWidth / 40, left: screenWidth / 20),
+                          child: const Text(
+                            "password",
+                            style: TextStyle(
+                              color: AppColors.greyColor,
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(left: screenWidth / 20, top: screenWidth / 80),
+                          child: TextFormField(
+                            // controller: emailcontroller,
+                            validator: (value) {
+                              if (!RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(value!)) {
+                                return "Enter email id ";
+                              }
+                              return null;
+                            },
+                            decoration: const InputDecoration(
+                              border: InputBorder.none,
+                              isDense: true,
+                              hintText: "Enter password ",
+                              contentPadding: EdgeInsets.all(12),
+                              hintStyle: TextStyle(color: Color(0xFFB3B3B3), fontSize: 16, fontWeight: FontWeight.w400, fontFamily: "Poppins"),
+                            ),
+                            onTap: () {},
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      AppStrings.fPassword,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 17,
+                        color: AppColors.black,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: screenWidth / 30, right: screenWidth / 30),
+                    child: const AppButton(
+                      elevated: "Log in",
+                    ),
+                  ),
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SignUpView(),
+                        ),
+                      );
+                    },
+                    child: const Text(
+                      AppStrings.sign,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 17,
+                        color: AppColors.black,
+                      ),
                     ),
                   ),
                 ],

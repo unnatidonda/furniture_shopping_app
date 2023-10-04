@@ -6,8 +6,10 @@ class AppStrings {
 
   //login text
   static const String email = "Email";
-  static const String welcome = "Hello!\nWELCOME BACK";
+  static const String welcomeBack = "Hello!\nWELCOME BACK";
   static const String password = "Password";
+  static const String welcome = "WELCOME";
+
   static const String fPassword = "Forgot Password";
   static const String log = "Log in";
   static const String sign = "Sign up";
