@@ -44,6 +44,7 @@ class LoginView extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: screenHeight / 50),
             const Text(
               textAlign: TextAlign.center,
               AppStrings.welcome,
@@ -52,7 +53,26 @@ class LoginView extends StatelessWidget {
                 fontWeight: FontWeight.w600,
                 fontSize: 32,
               ),
-            )
+            ),
+            SizedBox(height: screenHeight / 50),
+            Container(
+              height: screenHeight / 2,
+              width: screenWidth / 1.1,
+              decoration: const BoxDecoration(
+                color: AppColors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: AppColors.lightGrey,
+                    offset: Offset(1.4, 1.4),
+                    blurRadius: 10,
+                    spreadRadius: 2,
+                  ),
+                ],
+              ),
+              child: Column(
+                children: [],
+              ),
+            ),
           ],
         ),
       ),
