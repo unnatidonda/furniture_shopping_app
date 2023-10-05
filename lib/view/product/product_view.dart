@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:furniture_shopping_app/res/constant/app_assets.dart';
 import 'package:furniture_shopping_app/res/constant/app_colors.dart';
 import 'package:furniture_shopping_app/res/constant/app_strings.dart';
+import 'package:get/get.dart';
+
+import '../../utils/routes/routes_names.dart';
 
 class ProductView extends StatelessWidget {
   const ProductView({super.key});
@@ -147,7 +150,9 @@ class ProductView extends StatelessWidget {
                           RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.offNamed(RoutesNames.favoriteView                                                            );
+                      },
                       child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -164,7 +169,7 @@ class ProductView extends StatelessWidget {
                       ),
                     ),
                   ],
-                )
+                ),
               ],
             ),
           ),

@@ -17,7 +17,7 @@ class FavoriteView extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
+      body: const Column(
         children: [
           Row(
               // children: [Image.asset()],
