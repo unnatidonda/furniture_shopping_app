@@ -26,6 +26,7 @@ class AppStrings {
   static const String rupee = "\$ 50";
   //favorite
   static const String fCart = "Add all to my cart";
+  static const String fMinimal = "Minimal Standt";
   //cart
   static const String cpromo = "Enter your promo code";
   //check out
