@@ -17,4 +17,5 @@ class AppAssets {
   static const String profile = "assets/images/profile.png";
   static const String starProduct = "assets/images/star 1.jpg";
   static const String marker = "assets/images/marker.png";
+  static const String roundCh = "assets/images/outlinech.png";
 }
