@@ -22,6 +22,8 @@ class AppStrings {
   static const String hSimple = "Simple Desk";
   //product
   static const String cart = "Add to cart";
+  static const String minimalStand = "Minimal Stand";
+  static const String rupee = "\$ 50";
   //favorite
   static const String fCart = "Add all to my cart";
   //cart

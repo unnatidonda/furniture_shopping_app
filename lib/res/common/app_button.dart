@@ -27,7 +27,7 @@ class AppButton extends StatelessWidget {
             Size(screenWidth / 0.1, screenHeight / 16),
           ),
           shape: MaterialStatePropertyAll(
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
           ),
         ),
         onPressed: onPress ?? () {},
