@@ -32,7 +32,7 @@ class FavoriteView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(width: screenWidth / 20),
-              C(
+              ClipRect(
                 child: Image.asset(
                   AppAssets.product,
                   width: screenWidth / 4,
