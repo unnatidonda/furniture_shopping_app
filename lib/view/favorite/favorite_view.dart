@@ -28,20 +28,33 @@ class FavoriteView extends StatelessWidget {
         children: [
           SizedBox(height: screenWidth / 20),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               SizedBox(width: screenWidth / 20),
-              Image.asset(
-                AppAssets.product,
-                width: screenWidth / 4,
-                height: screenHeight / 5,
+              C(
+                child: Image.asset(
+                  AppAssets.product,
+                  width: screenWidth / 4,
+                  height: screenHeight / 7.5,
+                ),
               ),
+              SizedBox(width: screenWidth / 50),
               const Text(
+                textAlign: TextAlign.start,
                 AppStrings.fMinimal,
                 style: TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 17,
                   color: AppColors.greyL,
                 ),
+              ),
+              SizedBox(width: screenWidth / 10),
+              const CloseButton(
+                style: ButtonStyle(
+                  iconSize: MaterialStatePropertyAll(22),
+                ),
+                color: AppColors.lightBlackColor,
               ),
             ],
           ),
