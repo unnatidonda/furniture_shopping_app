@@ -30,6 +30,32 @@ class HomeView extends StatelessWidget {
         "history": AppStrings.hSimple,
       }
     ];
+    List<Map<String, dynamic>> mainList = [
+      {
+        "lImage": AppAssets.star,
+        "text": "Populer",
+      },
+      {
+        "lImage": AppAssets.chair,
+        "text": "Chair",
+      },
+      {
+        "lImage": AppAssets.table,
+        "text": "Table",
+      },
+      {
+        "lImage": AppAssets.sofa,
+        "text": "Armchair",
+      },
+      {
+        "lImage": AppAssets.bed,
+        "text": "Bed",
+      },
+      {
+        "lImage": AppAssets.lamp,
+        "text": "Lamb",
+      }
+    ];
     Size size = MediaQuery.of(context).size;
     double screenHeight = size.height;
     double screenWidth = size.width;
@@ -62,7 +88,7 @@ class HomeView extends StatelessWidget {
             ),
           ],
         ),
-        actions: [
+        actions: const [
           Icon(
             Icons.shopping_cart_outlined,
             size: 20,
@@ -74,60 +100,102 @@ class HomeView extends StatelessWidget {
         children: [
           Expanded(
             child: ListView.builder(
-              itemCount: 4,
+              itemCount: mainList.length,
               scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) => Container(
-                width: screenWidth / 10,
-                height: 10,
-                child: Image.asset(
-                  AppAssets.roundCh,
-                ),
-                decoration: const BoxDecoration(
-                  color: AppColors.bg,
+              itemBuilder: (context, index) => Padding(
+                padding: const EdgeInsets.all(12),
+                child: Column(
+                  children: [
+                    Container(
+                      height: screenHeight / 18,
+                      width: screenWidth / 8,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: AppColors.bg,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(8),
+                        child: Image.asset(
+                          mainList[index]["lImage"],
+                          // color: AppColors.sub,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      mainList[index]["text"],
+                      style: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: AppColors.greyL,
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
           ),
-          Expanded(
-            child: GridView.builder(
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemCount: furnitureList.length,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 25,
-                  crossAxisSpacing: 20,
-                  mainAxisExtent: 280,
-                ),
-                itemBuilder: (context, index) {
-                  Column(
-                    // mainAxisAlignment: MainAxisAlignment.center,
+          GridView.builder(
+              shrinkWrap: true,
+              scrollDirection: Axis.vertical,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: furnitureList.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 3,
+                // mainAxisSpacing: 1,
+                mainAxisExtent: 300,
+              ),
+              itemBuilder: (context, index) {
+                return Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Image.asset(
-                        furnitureList[index]["populerImage"],
-                        height: screenHeight / 10,
-                        width: screenWidth / 5,
+                      Stack(
+                        children: [
+                          Image.asset(
+                            furnitureList[index]["populerImage"],
+                            width: screenWidth / 2.3,
+                          ),
+                          Align(
+                            alignment: Alignment.bottomRight,
+                            child: Container(
+                              height: screenHeight / 20,
+                              width: screenWidth / 10,
+                              decoration: BoxDecoration(
+                                color: AppColors.lightg,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: const Icon(
+                                Icons.shopping_bag,
+                                color: AppColors.black,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
+                      SizedBox(height: screenHeight / 60),
                       Text(
                         furnitureList[index]["history"],
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: AppColors.greyL,
-                          fontSize: 16,
+                          fontSize: 14,
                           fontWeight: FontWeight.w400,
                         ),
                       ),
+                      // SizedBox(height: screenHeight / 150),
                       Text(
                         furnitureList[index]["price"],
                         style: const TextStyle(
                           color: AppColors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w400,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ],
-                  );
-                }),
-          ),
+                  ),
+                );
+              }),
         ],
       ),
     );

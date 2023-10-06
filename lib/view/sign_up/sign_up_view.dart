@@ -4,7 +4,7 @@ import '../../res/common/app_button.dart';
 import '../../res/constant/app_assets.dart';
 import '../../res/constant/app_colors.dart';
 import '../../res/constant/app_strings.dart';
-import '../favorite/favorite_view.dart';
+import '../home/home_view.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
@@ -260,7 +260,7 @@ class SignUpView extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const FavoriteView(),
+                          builder: (context) => const HomeView(),
                         ),
                       );
                     },
