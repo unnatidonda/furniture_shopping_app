@@ -29,6 +29,7 @@ class AppStrings {
   static const String fMinimal = "Minimal Standt";
   //cart
   static const String cpromo = "Enter your promo code";
+  static const String myCart = "My cart";
   //check out
   static const String address = "Shipping address";
   static const String payment = "Payment";

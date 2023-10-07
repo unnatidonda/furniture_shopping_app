@@ -19,7 +19,12 @@ class AppAssets {
   static const String marker = "assets/images/marker.png";
   static const String lamp = "assets/images/lamp.png";
   static const String sofa = "assets/images/sofa.png";
+  static const String myCartTwo = "assets/images/myCartTwo.png";
+  static const String myCartThree = "assets/images/myCartThree.png";
   static const String stand = "assets/images/stand.jpg";
+  static const String minimalThird = "assets/images/minimalThird.png";
+  static const String minimalSecond = "assets/images/minimalSecond.png";
+  static const String minimalFirst = "assets/images/minimalFirst.png";
   static const String lampTwo = "assets/images/lamptwo.png";
   static const String roundCh = "assets/images/outlinech.png";
 }

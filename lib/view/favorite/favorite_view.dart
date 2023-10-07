@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:furniture_shopping_app/res/common/app_button.dart';
 import 'package:furniture_shopping_app/res/constant/app_assets.dart';
 import 'package:furniture_shopping_app/res/constant/app_colors.dart';
+import 'package:furniture_shopping_app/view/cart/cart_view.dart';
 
-import '../../res/common/favorite_screen.dart';
+import '../../res/common/app_favorite.dart';
 
 class FavoriteView extends StatelessWidget {
   const FavoriteView({super.key});
@@ -30,8 +31,8 @@ class FavoriteView extends StatelessWidget {
             SizedBox(
               height: screenHeight / 50,
             ),
-            AppFavorites(
-              image: AppAssets.product,
+            const AppFavorites(
+              image: AppAssets.minimalFirst,
             ),
             const Divider(
               thickness: 2,
@@ -39,8 +40,8 @@ class FavoriteView extends StatelessWidget {
               indent: 15,
               endIndent: 15,
             ),
-            AppFavorites(
-              image: AppAssets.stand,
+            const AppFavorites(
+              image: AppAssets.minimalSecond,
             ),
             const Divider(
               thickness: 2,
@@ -48,8 +49,8 @@ class FavoriteView extends StatelessWidget {
               indent: 15,
               endIndent: 15,
             ),
-            AppFavorites(
-              image: AppAssets.minimalStand,
+            const AppFavorites(
+              image: AppAssets.minimalThird,
             ),
             const Divider(
               thickness: 2,
@@ -57,12 +58,19 @@ class FavoriteView extends StatelessWidget {
               indent: 15,
               endIndent: 15,
             ),
-            AppFavorites(
+            const AppFavorites(
               image: AppAssets.lampTwo,
             ),
-            SizedBox(height: screenHeight / 30),
+            SizedBox(height: screenHeight / 20),
             AppButton(
               elevated: "Add to my cart",
+              onPress: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CartView(),
+                    ));
+              },
             ),
           ],
         ),
