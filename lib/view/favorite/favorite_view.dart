@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:furniture_shopping_app/res/common/app_button.dart';
 import 'package:furniture_shopping_app/res/constant/app_assets.dart';
 import 'package:furniture_shopping_app/res/constant/app_colors.dart';
 
-import '../../res/constant/app_strings.dart';
+import '../../res/common/favorite_screen.dart';
 
 class FavoriteView extends StatelessWidget {
   const FavoriteView({super.key});
@@ -12,67 +13,59 @@ class FavoriteView extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     double screenHeight = size.height;
     double screenWidth = size.width;
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          textAlign: TextAlign.center,
-          "Favorite",
-          style: TextStyle(
-            color: AppColors.lightBlackColor,
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-      ),
-      body: Column(
-        children: [
-          SizedBox(height: screenWidth / 20),
-          Column(
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  SizedBox(width: screenWidth / 20),
-                  Image.asset(
-                    AppAssets.product,
-                    width: screenWidth / 4,
-                    height: screenHeight / 7.5,
-                  ),
-                  SizedBox(width: screenWidth / 50),
-                  Row(
-                    children: [
-                      const Text(
-                        textAlign: TextAlign.start,
-                        AppStrings.fMinimal,
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 17,
-                          color: AppColors.greyL,
-                        ),
-                      ),
-                      SizedBox(width: screenWidth / 10),
-                      const CloseButton(
-                        style: ButtonStyle(
-                          iconSize: MaterialStatePropertyAll(22),
-                        ),
-                        color: AppColors.lightBlackColor,
-                      ),
-                    ],
-                  ),
-                ],
+    EdgeInsets devicePadding = MediaQuery.of(context).viewPadding;
+    return Padding(
+      padding: devicePadding,
+      child: Scaffold(
+        body: Column(
+          children: [
+            const Text(
+              "favorites",
+              style: TextStyle(
+                color: AppColors.black,
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
               ),
-              // const Text(
-              //   "\$ 25.00",
-              //   style: TextStyle(
-              //     color: AppColors.lightBlackColor,
-              //     fontSize: 16,
-              //     fontWeight: FontWeight.w600,
-              //   ),
-              // ),
-            ],
-          ),
-        ],
+            ),
+            SizedBox(
+              height: screenHeight / 50,
+            ),
+            AppFavorites(
+              image: AppAssets.product,
+            ),
+            const Divider(
+              thickness: 2,
+              color: AppColors.lightg,
+              indent: 15,
+              endIndent: 15,
+            ),
+            AppFavorites(
+              image: AppAssets.stand,
+            ),
+            const Divider(
+              thickness: 2,
+              color: AppColors.lightg,
+              indent: 15,
+              endIndent: 15,
+            ),
+            AppFavorites(
+              image: AppAssets.minimalStand,
+            ),
+            const Divider(
+              thickness: 2,
+              color: AppColors.lightg,
+              indent: 15,
+              endIndent: 15,
+            ),
+            AppFavorites(
+              image: AppAssets.lampTwo,
+            ),
+            SizedBox(height: screenHeight / 30),
+            AppButton(
+              elevated: "Add to my cart",
+            ),
+          ],
+        ),
       ),
     );
   }
