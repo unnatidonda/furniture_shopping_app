@@ -19,6 +19,10 @@ class AppAssets {
   static const String marker = "assets/images/marker.png";
   static const String lamp = "assets/images/lamp.png";
   static const String sofa = "assets/images/sofa.png";
+  static const String logo = "assets/images/Logo.jpg";
+  static const String graphics = "assets/images/Graphics.jpg";
+  static const String card = "assets/images/card.jpg";
+  static const String starOne = "assets/images/star 1.jpg";
   static const String myCartTwo = "assets/images/myCartTwo.png";
   static const String myCartThree = "assets/images/myCartThree.png";
   static const String stand = "assets/images/stand.jpg";

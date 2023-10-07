@@ -141,7 +141,7 @@ class CartView extends StatelessWidget {
               ],
             ),
             SizedBox(height: screenHeight / 40),
-            AppButton(
+            const AppButton(
               elevated: "Check out",
             )
           ],

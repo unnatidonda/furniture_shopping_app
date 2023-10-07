@@ -4,7 +4,7 @@ import '../../res/common/app_button.dart';
 import '../../res/constant/app_assets.dart';
 import '../../res/constant/app_colors.dart';
 import '../../res/constant/app_strings.dart';
-import '../favorite/favorite_view.dart';
+import '../Review/review_view.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
@@ -242,7 +242,12 @@ class SignUpView extends StatelessWidget {
                             isDense: true,
                             hintText: "Enter password ",
                             contentPadding: EdgeInsets.all(12),
-                            hintStyle: TextStyle(color: Color(0xFFB3B3B3), fontSize: 16, fontWeight: FontWeight.w400, fontFamily: "Poppins"),
+                            hintStyle: TextStyle(
+                              color: Color(0xFFB3B3B3),
+                              fontSize: 16,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: "Poppins",
+                            ),
                           ),
                           onTap: () {},
                         ),
@@ -260,7 +265,7 @@ class SignUpView extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const FavoriteView(),
+                          builder: (context) => const ReviewView(),
                         ),
                       );
                     },

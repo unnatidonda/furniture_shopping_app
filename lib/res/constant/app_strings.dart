@@ -36,11 +36,21 @@ class AppStrings {
   static const String payment = "Payment";
   static const String delivery = "Delivery method";
   static const String submit = "Submit order";
+  static const String day = "Fast (2-3days)";
+  static const String pay = "Payment";
+  static const String brunofe = "Bruno Fernandes";
   //congrats
   static const String success = "SUCCESS!";
   static const String order = "Track your orders";
   static const String back = "Back to home";
   static const String get = "Get Started";
+  static const String deliver = "Your order will be delivered soon.\nThank you for choosing our app!";
+  //congrats
+  static const String notification = "Notification";
+  // static const String minimal = "Minimal Stand";
+  // static const String bruno = "Bruno Fernandes";
+  // static const String kristin = "Kristin Watson";
+  // static const String ewrite = "Write a review";
   //congrats
   static const String review = "Rating & Review";
   static const String minimal = "Minimal Stand";
