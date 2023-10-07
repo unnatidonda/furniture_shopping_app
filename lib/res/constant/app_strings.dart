@@ -30,6 +30,7 @@ class AppStrings {
   //cart
   static const String cpromo = "Enter your promo code";
   static const String myCart = "My cart";
+  static const String total = "Total:";
   //check out
   static const String address = "Shipping address";
   static const String payment = "Payment";
