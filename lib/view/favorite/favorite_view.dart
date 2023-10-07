@@ -27,35 +27,49 @@ class FavoriteView extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(height: screenWidth / 20),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
+          Column(
             children: [
-              SizedBox(width: screenWidth / 20),
-              ClipRect(
-                child: Image.asset(
-                  AppAssets.product,
-                  width: screenWidth / 4,
-                  height: screenHeight / 7.5,
-                ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  SizedBox(width: screenWidth / 20),
+                  Image.asset(
+                    AppAssets.product,
+                    width: screenWidth / 4,
+                    height: screenHeight / 7.5,
+                  ),
+                  SizedBox(width: screenWidth / 50),
+                  Row(
+                    children: [
+                      const Text(
+                        textAlign: TextAlign.start,
+                        AppStrings.fMinimal,
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 17,
+                          color: AppColors.greyL,
+                        ),
+                      ),
+                      SizedBox(width: screenWidth / 10),
+                      const CloseButton(
+                        style: ButtonStyle(
+                          iconSize: MaterialStatePropertyAll(22),
+                        ),
+                        color: AppColors.lightBlackColor,
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              SizedBox(width: screenWidth / 50),
-              const Text(
-                textAlign: TextAlign.start,
-                AppStrings.fMinimal,
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 17,
-                  color: AppColors.greyL,
-                ),
-              ),
-              SizedBox(width: screenWidth / 10),
-              const CloseButton(
-                style: ButtonStyle(
-                  iconSize: MaterialStatePropertyAll(22),
-                ),
-                color: AppColors.lightBlackColor,
-              ),
+              // const Text(
+              //   "\$ 25.00",
+              //   style: TextStyle(
+              //     color: AppColors.lightBlackColor,
+              //     fontSize: 16,
+              //     fontWeight: FontWeight.w600,
+              //   ),
+              // ),
             ],
           ),
         ],
