@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:furniture_shopping_app/view/profile/profile_view.dart';
 
 import '../../res/common/app_button.dart';
 import '../../res/constant/app_assets.dart';
 import '../../res/constant/app_colors.dart';
 import '../../res/constant/app_strings.dart';
+import '../order/order_view.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});
@@ -265,7 +265,7 @@ class SignUpView extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const ProfileView(),
+                          builder: (context) => const OrderView(),
                         ),
                       );
                     },
