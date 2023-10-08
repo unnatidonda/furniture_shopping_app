@@ -66,6 +66,10 @@ class AppStrings {
   static const String reviewItems = "Reviews for 5 items";
   static const String setting = "Setting                     ";
   static const String nPFC = "Notification, Password, FAQ, Contact";
+
+  // shopping address
+  static const String shippingAddress = "Shipping address";
+
   //congrats
   static const String review = "Rating & Review";
   static const String minimal = "Minimal Stand";
