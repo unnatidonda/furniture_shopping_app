@@ -47,10 +47,25 @@ class AppStrings {
   static const String deliver = "Your order will be delivered soon.\nThank you for choosing our app!";
   //congrats
   static const String notification = "Notification";
-  // static const String minimal = "Minimal Stand";
+  static const String oderSuccessfully = "Your order #123456789 has been \nshipped successfully";
+  static const String dolor = "Lorem ipsum dolor sit amet,\n consectetur adipiscing elit. ";
   // static const String bruno = "Bruno Fernandes";
   // static const String kristin = "Kristin Watson";
   // static const String ewrite = "Write a review";
+
+  // profile
+  static const String kristinWatson = "KristinWatson";
+  static const String emailProfile = "runo203@gmail.com";
+  static const String myOrders = "My orders                  ";
+  static const String alreadyOrders = "Already have 10 orders";
+  static const String shippingAddresses = "Shipping Addresses";
+  static const String address3 = "03 Addresses";
+  static const String paymentMethod = "Payment Method     ";
+  static const String haveCard = "You have 2 cards";
+  static const String myReview = "My reviews               ";
+  static const String reviewItems = "Reviews for 5 items";
+  static const String setting = "Setting                     ";
+  static const String nPFC = "Notification, Password, FAQ, Contact";
   //congrats
   static const String review = "Rating & Review";
   static const String minimal = "Minimal Stand";
@@ -58,5 +73,5 @@ class AppStrings {
   static const String kristin = "Kristin Watson";
   static const String ewrite = "Write a review";
   //
-  static const String notification = "Notificaton";
+  // static const String notification = "Notificaton";
 }

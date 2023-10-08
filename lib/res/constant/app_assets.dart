@@ -23,6 +23,9 @@ class AppAssets {
   static const String graphics = "assets/images/Graphics.jpg";
   static const String card = "assets/images/card.jpg";
   static const String starOne = "assets/images/star 1.jpg";
+  static const String favoriteProfile = "assets/images/favoriteProfile.png";
+  static const String notificationThree = "assets/images/notificationThree.png";
+  static const String notificationfour = "assets/images/notificationfour.png";
   static const String myCartTwo = "assets/images/myCartTwo.png";
   static const String myCartThree = "assets/images/myCartThree.png";
   static const String stand = "assets/images/stand.jpg";
