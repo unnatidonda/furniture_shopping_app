@@ -4,7 +4,9 @@ import '../../res/constant/app_colors.dart';
 import '../../res/constant/app_strings.dart';
 
 class ShoppingAddressView extends StatelessWidget {
-  const ShoppingAddressView({super.key});
+  ShoppingAddressView({super.key});
+
+  bool isChecked = true;
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +18,7 @@ class ShoppingAddressView extends StatelessWidget {
       body: Padding(
         padding: devicePadding,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
@@ -39,10 +42,16 @@ class ShoppingAddressView extends StatelessWidget {
                 ),
               ],
             ),
-            Checkbox(
-              value: value,
-              onChanged: (value) {},
-            )
+            Row(
+              children: [
+                Checkbox(
+                  checkColor: Colors.white,
+                  fillColor: MaterialStatePropertyAll(Colors.black),
+                  value: isChecked,
+                  onChanged: (bool? value) {},
+                ),
+              ],
+            ),
           ],
         ),
       ),

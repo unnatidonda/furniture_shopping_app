@@ -69,6 +69,7 @@ class AppStrings {
 
   // shopping address
   static const String shippingAddress = "Shipping address";
+  static const String useShoppingAddress = "Use as the shipping address";
 
   //congrats
   static const String review = "Rating & Review";
