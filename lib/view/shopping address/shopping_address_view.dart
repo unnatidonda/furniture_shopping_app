@@ -46,7 +46,7 @@ class ShoppingAddressView extends StatelessWidget {
               children: [
                 Checkbox(
                   checkColor: Colors.white,
-                  fillColor: MaterialStatePropertyAll(Colors.black),
+                  fillColor: const MaterialStatePropertyAll(Colors.black),
                   value: isChecked,
                   onChanged: (bool? value) {},
                 ),
